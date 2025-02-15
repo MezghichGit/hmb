@@ -9,6 +9,7 @@ import { AddIngPipe } from './pipes/add-ing.pipe';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { ListEmployerComponent } from './list-employer/list-employer.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { ListPostsComponent } from './list-posts/list-posts.component';
 
 
 
@@ -19,7 +20,8 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
     UpperCaseFirstLetterPipe,
     AddIngPipe,
     CurrencyFormatPipe,
-    ListEmployerComponent
+    ListEmployerComponent,
+    ListPostsComponent
   ],
   imports: [
     BrowserModule,
