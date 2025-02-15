@@ -1,0 +1,14 @@
+<h1 align="center">Bienvenue à HMB</h1>
+{{nom}}
+<h3>Formation en : {{formation}}</h3>
+
+<ol>
+  <li *ngFor="let name of names">{{name|upperCaseFirstLetter|addIng}}</li>
+</ol>
+
+<p>Prix en Dinar Algérien : {{ 15000 | currencyFormat: 'DZD' }}</p>
+<p>Prix en Euro : {{ 15000 | currencyFormat: 'EUR' }}</p>
+<p>Prix en Dollar : {{ 15000 | currencyFormat: 'USD' }}</p>
+
+<hr/>
+<app-list-user></app-list-user>
