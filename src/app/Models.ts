@@ -10,3 +10,11 @@ export interface rdv{
  typeRdv:string,
  date:Date
 }
+
+export interface Employer{
+    id:number,
+    name:string,
+    username:string,
+    email:string,
+    address:string
+}

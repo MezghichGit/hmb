@@ -7,6 +7,10 @@ import { ListUserComponent } from './list-user/list-user.component';
 import { UpperCaseFirstLetterPipe } from './pipes/upper-case-first-letter.pipe';
 import { AddIngPipe } from './pipes/add-ing.pipe';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
+import { ListEmployerComponent } from './list-employer/list-employer.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -14,13 +18,14 @@ import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
     ListUserComponent,
     UpperCaseFirstLetterPipe,
     AddIngPipe,
-    CurrencyFormatPipe
+    CurrencyFormatPipe,
+    ListEmployerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
