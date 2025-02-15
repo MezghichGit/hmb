@@ -10,6 +10,9 @@ import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { ListEmployerComponent } from './list-employer/list-employer.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ListPostsComponent } from './list-posts/list-posts.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+
 
 
 
@@ -21,7 +24,9 @@ import { ListPostsComponent } from './list-posts/list-posts.component';
     AddIngPipe,
     CurrencyFormatPipe,
     ListEmployerComponent,
-    ListPostsComponent
+    ListPostsComponent,
+    NavbarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
