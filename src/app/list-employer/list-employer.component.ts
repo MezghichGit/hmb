@@ -22,7 +22,7 @@ export class ListEmployerComponent implements OnInit{
         {
           //console.log(data)
           this.employers = data;
-          console.log(this.employers)
+          //console.log(this.employers)
         }
     );
   }
