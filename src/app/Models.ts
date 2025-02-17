@@ -33,3 +33,10 @@ export interface Post{
     title: string,
     body:string
 }
+
+export interface Provider{
+    id: number,
+    name: string,
+    email: string,
+    address:string
+}

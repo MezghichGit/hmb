@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListEmployerComponent } from './list-employer/list-employer.component';
 import { ListPostsComponent } from './list-posts/list-posts.component';
 import { HomeComponent } from './home/home.component';
+import { ListProvidersComponent } from './list-providers/list-providers.component';
+import { AddProviderComponent } from './add-provider/add-provider.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,15 @@ const routes: Routes = [
   {
     path:"home",
     component:HomeComponent
+  }
+  ,
+  {
+    path:"listProviders",
+    component:ListProvidersComponent
+  },
+  {
+    path:"addProvider",
+    component:AddProviderComponent
   }
   
 ];

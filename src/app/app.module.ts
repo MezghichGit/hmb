@@ -12,6 +12,8 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { ListPostsComponent } from './list-posts/list-posts.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { ListProvidersComponent } from './list-providers/list-providers.component';
+import { AddProviderComponent } from './add-provider/add-provider.component';
 
 
 
@@ -27,6 +29,8 @@ import { HomeComponent } from './home/home.component';
     ListPostsComponent,
     NavbarComponent,
     HomeComponent,
+    ListProvidersComponent,
+    AddProviderComponent,
   ],
   imports: [
     BrowserModule,
