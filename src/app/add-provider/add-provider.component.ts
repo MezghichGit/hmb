@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ProviderService } from '../services/provider.service';
+import { Provider } from '../Models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-provider',
@@ -8,4 +11,21 @@ import { Component } from '@angular/core';
 })
 export class AddProviderComponent {
 
+  public constructor(private service: ProviderService, private router:Router) { }
+
+   ajouterProviderBD(providerFormValue: any) {
+
+    let provider: Provider = {
+      "name": providerFormValue.name,
+      "email": providerFormValue.email,
+      "address": providerFormValue.address
+    }
+
+    this.service.saveProvider(provider).subscribe(
+      data => {//console.log("Saved") 
+        this.router.navigate(["/listProviders"]);
+      }
+    );
+
+  }
 }
