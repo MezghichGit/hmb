@@ -17,4 +17,8 @@ export class ProviderService {
     saveProvider(provider:Provider): Observable<Provider>{
       return this.http.post<Provider>("http://127.0.0.1:8085/providers/",provider);
     }
+
+    deleteProvider(id:any){
+     return this.http.delete("http://127.0.0.1:8085/providers/"+id);
+    }
 }

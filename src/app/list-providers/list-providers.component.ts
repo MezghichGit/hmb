@@ -15,6 +15,16 @@ export class ListProvidersComponent implements OnInit{
     }
 
   ngOnInit(): void {
+   this.loadProvider();
+  }
+
+  deleteProvider(provider:any){
+    this.service.deleteProvider(provider.id).subscribe(
+      data=>this.loadProvider()
+    );
+  }
+
+  loadProvider(){
     this.service.getAllProviders().subscribe(
       (data) =>
          {
@@ -24,5 +34,4 @@ export class ListProvidersComponent implements OnInit{
          }
      );
   }
-
 }
