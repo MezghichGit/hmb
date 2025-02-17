@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ListProvidersComponent } from './list-providers/list-providers.component';
 import { AddProviderComponent } from './add-provider/add-provider.component';
+import { UpdateProviderComponent } from './update-provider/update-provider.component';
 
 
 
@@ -32,6 +33,7 @@ import { AddProviderComponent } from './add-provider/add-provider.component';
     HomeComponent,
     ListProvidersComponent,
     AddProviderComponent,
+    UpdateProviderComponent,
   ],
   imports: [
     BrowserModule,

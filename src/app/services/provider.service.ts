@@ -21,4 +21,14 @@ export class ProviderService {
     deleteProvider(id:any){
      return this.http.delete("http://127.0.0.1:8085/providers/"+id);
     }
+
+    getProviderById(id:any){
+      return this.http.get("http://127.0.0.1:8085/providers/"+id);
+     }
+
+     updateProvider(provider:Provider): Observable<Provider>{
+      return this.http.put<Provider>("http://127.0.0.1:8085/providers/",provider);
+    }
+
+     
 }

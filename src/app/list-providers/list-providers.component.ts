@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Provider } from '../Models';
 import { ProviderService } from '../services/provider.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-providers',
@@ -11,7 +12,7 @@ import { ProviderService } from '../services/provider.service';
 export class ListProvidersComponent implements OnInit{
   
   providers:Provider[]=[];
-    constructor(private service:ProviderService){
+    constructor(private service:ProviderService, private router:Router){
     }
 
   ngOnInit(): void {
@@ -24,6 +25,9 @@ export class ListProvidersComponent implements OnInit{
     );
   }
 
+  updateProvider(provider:any){
+this.router.navigate((["/updateProvider",provider.id]))
+  }
   loadProvider(){
     this.service.getAllProviders().subscribe(
       (data) =>
