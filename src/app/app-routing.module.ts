@@ -27,7 +27,8 @@ const routes: Routes = [
   {
     path:"addProvider",
     component:AddProviderComponent
-  }
+  },
+  { path: '',   redirectTo: '/listProviders', pathMatch: 'full' }, 
   
 ];
 
