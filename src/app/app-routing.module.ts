@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ListProvidersComponent } from './list-providers/list-providers.component';
 import { AddProviderComponent } from './add-provider/add-provider.component';
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
+import { DetailsProviderComponent } from './details-provider/details-provider.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path:"updateProvider/:id",
     component:UpdateProviderComponent
+  },
+  {
+    path:"detailsProvider/:id",
+    component:DetailsProviderComponent
   },
   { path: '',   redirectTo: '/listProviders', pathMatch: 'full' }, 
   

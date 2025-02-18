@@ -9,33 +9,37 @@ import { Router } from '@angular/router';
   templateUrl: './list-providers.component.html',
   styleUrl: './list-providers.component.css'
 })
-export class ListProvidersComponent implements OnInit{
-  
-  providers:Provider[]=[];
-    constructor(private service:ProviderService, private router:Router){
-    }
+export class ListProvidersComponent implements OnInit {
 
-  ngOnInit(): void {
-   this.loadProvider();
+  providers: Provider[] = [];
+  constructor(private service: ProviderService, private router: Router) {
   }
 
-  deleteProvider(provider:any){
+  ngOnInit(): void {
+    this.loadProvider();
+  }
+
+  deleteProvider(provider: any) {
     this.service.deleteProvider(provider.id).subscribe(
-      data=>this.loadProvider()
+      data => this.loadProvider()
     );
   }
 
-  updateProvider(provider:any){
-this.router.navigate((["/updateProvider",provider.id]))
+  updateProvider(provider: any) {
+    this.router.navigate((["/updateProvider", provider.id]))
   }
-  loadProvider(){
+
+  detailsProvider(provider:any){
+    this.router.navigate((["/detailsProvider", provider.id]))
+  }
+
+  loadProvider() {
     this.service.getAllProviders().subscribe(
-      (data) =>
-         {
-           //console.log(data)
-           this.providers = data;
-           //console.log(this.employers)
-         }
-     );
+      (data) => {
+        //console.log(data)
+        this.providers = data;
+        //console.log(this.employers)
+      }
+    );
   }
 }

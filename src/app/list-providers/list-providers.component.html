@@ -8,6 +8,7 @@
         <th>Address</th>
         <th>Update</th>
         <th>Delete</th>
+        <th>Details</th>
     </tr>
     <tr *ngFor="let provider of providers">
         <td>{{provider.id}}</td>
@@ -16,6 +17,7 @@
         <td>{{provider.address}}</td>
         <td><button class="btn btn-warning" (click)="updateProvider(provider)">Update</button></td>
         <td><button class="btn btn-danger" (click)="deleteProvider(provider)">Delete</button></td>
+        <td><button class="btn btn-success" (click)="detailsProvider(provider)">Details</button></td>
     </tr>
 
 </table>
