@@ -16,12 +16,12 @@ export class ListProvidersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadProvider();
+    this.loadProviders();
   }
 
   deleteProvider(provider: any) {
     this.service.deleteProvider(provider.id).subscribe(
-      data => this.loadProvider()
+      data => this.loadProviders()
     );
   }
 
@@ -33,7 +33,7 @@ export class ListProvidersComponent implements OnInit {
     this.router.navigate((["/detailsProvider", provider.id]))
   }
 
-  loadProvider() {
+  loadProviders() {
     this.service.getAllProviders().subscribe(
       (data) => {
         //console.log(data)

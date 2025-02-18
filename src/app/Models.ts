@@ -40,3 +40,11 @@ export interface Provider{
     email: string,
     address:string
 }
+
+export interface Article{
+    id?: number,
+    label: string,
+    price: number,
+    picture:string,
+    provider? : Provider
+}
